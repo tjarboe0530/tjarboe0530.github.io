@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FilmRex</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="movie-title">Welcome to FilmRex!</h1>
+		<h2 id="rec"> </h2>
+        <p id="instruction-text">Please enter in a ranking for each of the following 10 movies and our advanced FilmRex Engine will compare your rankings with the rankings of 10,000 other people to find out the best movie for you to watch!</p>
+		
+        <button id="start-button">Let's go!</button>
+        <form id="movie-form" style="display: none;">
+            	
+			<div class="slider-container">
+                <input type="range" id="movie-rating" name="score" min="0" max="100" step="1" value="50">
+				<output for="movie-rating" id="slider-value">50</output>
+            </div>
+
+            <button type="button" id="next-button">Submit Score</button>
+            <button type="button" id="skip-button">Haven't seen it</button>
+			<button type="button" id="reset-button">Reset</button>
+        </form>
+		<button id="info-button" style="display: none;">Learn more</button>
+    </div>
+	
+    <script src="app.js"></script>
+</body>
+</html>
