@@ -1,0 +1,92 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #ff4b4b 0%, #000000 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    color: #ffffff;
+}
+
+.container {
+    background-color: #1c1c1c;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+}
+
+h1 {
+	margin: auto;
+    font-size: 32px;
+    font-weight: 700;
+    color: #ff4b4b; /* Red color */
+}
+
+h2 {
+	margin = auto;
+    font-size: 40px;
+    font-weight: 700;
+    color: #ffffff; 
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.slider-container {
+    position: relative;
+    margin-bottom: 40px; /* Increased margin */
+}
+
+.slider-container input[type=range] {
+    width: 100%;
+	accent-color: red;
+}
+
+.slider-container output {
+    position: relative;
+    font-size: 48px; /* Increase font size */
+    width: 40px; /* Adjust width */
+    text-align: center; /* Center text */
+    margin: auto;
+}
+
+button {
+    padding: 15px;
+    font-size: 18px;
+    background-color: #ff4b4b;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: auto;
+}
+
+button:hover {
+    background-color: #ff7676;
+}
+
+label {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+output {
+    display: block;
+    font-size: 14px;
+    margin-top: 5px;
+    color: #ffffff;
+}
+
+.container p.instruction-text {
+    font-size: 18px;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
