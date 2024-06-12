@@ -256,11 +256,11 @@ document.addEventListener('DOMContentLoaded', function() {
 		rec.textContent = suggestedMovie.title;
 		instructionText.textContent = "Based on your taste in " + suggestedMovie.genres.join(", ");
 		movieForm.style.display = "block";
-		resetButton.style.display = "inline-block";
 		nextButton.style.display = "none";
 		skipButton.style.display = "none";
 		output.style.display = "none";
 		slider.style.display = "none";
+		resetButton.style.display = "inline-block";
 		infoButton.style.display = "inline-block";
 	}
 
