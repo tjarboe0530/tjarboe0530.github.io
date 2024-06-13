@@ -2,8 +2,8 @@ body {
     font-family: Arial, sans-serif;
     /*background: linear-gradient(135deg, #ff4b4b 0%, #000000 100%);*/
     background: url(images/theater.jpg);
-    background-size: 100% 115%;
-    background-attachment: scroll;
+    background-size: cover;
+    background-attachment: fixed;
     display: flex;
     justify-content: center;
     align-items: center;
