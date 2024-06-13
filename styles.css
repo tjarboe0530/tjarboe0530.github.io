@@ -88,8 +88,8 @@ output {
     color: #1c1c1c;
 }
 
-.container p.instruction-text {
-    font-size: 18px;
+#instruction-text {
+    font-size: 25px;
     color: #1c1c1c;
     margin-bottom: 20px;
 }
@@ -105,7 +105,7 @@ output {
     width: 550px;
     height: auto;
     opacity: 0;
-    transform: translate(-50%, -187%);
+    transform: translate(-50%, -225%);
     transition: opacity 0.5s ease-in-out;
 }
 
