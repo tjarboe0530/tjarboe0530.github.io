@@ -33,6 +33,42 @@ document.addEventListener('DOMContentLoaded', function() {
 	];
 
     const moviesForResults = [
+    { title: "Inception", genres: ["Action", "Adventure", "Sci-Fi"] },
+    { title: "The Shawshank Redemption", genres: ["Drama"] },
+    { title: "The Dark Knight", genres: ["Action", "Crime", "Drama"] },
+    { title: "Pulp Fiction", genres: ["Crime", "Drama"] },
+    { title: "Fight Club", genres: ["Drama"] },
+    { title: "Forrest Gump", genres: ["Drama", "Romance"] },
+    { title: "Dune", genres: ["Action", "Sci-Fi"] },
+    { title: "Star Wars", genres: ["Action", "Adventure", "Fantasy"] },
+    { title: "Interstellar", genres: ["Adventure", "Drama", "Sci-Fi"] },
+    { title: "The Godfather", genres: ["Crime", "Drama"] },
+    { title: "The Silence of the Lambs", genres: ["Crime", "Drama", "Thriller"] },
+    { title: "Gladiator", genres: ["Action", "Adventure", "Drama"] },
+    { title: "Braveheart", genres: ["Biography", "Drama", "History"] },
+    { title: "Saving Private Ryan", genres: ["Drama", "War"] },
+    { title: "The Pianist", genres: ["Biography", "Drama", "Music"] },
+    { title: "The Usual Suspects", genres: ["Crime", "Mystery", "Thriller"] },
+    { title: "The Intouchables", genres: ["Biography", "Comedy", "Drama"] },
+    { title: "The Terminator", genres: ["Action", "Sci-Fi"] },
+    { title: "The Social Network", genres: ["Biography", "Drama"] },
+    { title: "Django Unchained", genres: ["Drama", "Western"] },
+    { title: "The Jungle Book", genres: ["Animation", "Adventure", "Drama"] },
+    { title: "The Avengers", genres: ["Action", "Adventure", "Sci-Fi"] },
+    { title: "The Godfather Part II", genres: ["Crime", "Drama"] },
+    { title: "Goodfellas", genres: ["Biography", "Crime", "Drama"] },
+    { title: "The Green Mile", genres: ["Crime", "Drama", "Fantasy"] },
+    { title: "Schindler's List", genres: ["Biography", "Drama", "History"] },
+    { title: "The Prestige", genres: ["Drama", "Mystery", "Sci-Fi"] },
+    { title: "Titanic", genres: ["Drama", "Romance"] },
+    { title: "Alien", genres: ["Horror", "Sci-Fi"] },
+    { title: "The Departed", genres: ["Crime", "Drama", "Thriller"] },
+    { title: "The Green Mile", genres: ["Crime", "Drama", "Fantasy"] },
+    { title: "Napolean", genres: ["Biography", "Drama", "History"] },
+    { title: "The Prestige", genres: ["Drama", "Mystery", "Sci-Fi"] },
+    { title: "Titanic", genres: ["Drama", "Romance"] },
+    { title: "Alien", genres: ["Horror", "Sci-Fi"] },
+    { title: "The Departed", genres: ["Crime", "Drama", "Thriller"] },
     { title: "Toy Story (1995)", genres: ["Adventure", "Animation", "Children", "Comedy", "Fantasy"] },
     { title: "Jumanji (1995)", genres: ["Adventure", "Children", "Fantasy"] },
     { title: "Grumpier Old Men (1995)", genres: ["Comedy", "Romance"] },
@@ -194,6 +230,10 @@ document.addEventListener('DOMContentLoaded', function() {
     { title: "Scream (1996)", genres: ["Horror", "Mystery"] },
     { title: "Michael (1996)", genres: ["Comedy", "Drama", "Fantasy", "Romance"] },
     { title: "Air Bud (1997)", genres: ["Children", "Comedy", "Drama"] },
+    { title: "Air Bud: Golden Receiver (1998)", genres: ["Children", "Comedy", "Drama"] },
+    { title: "Air Bud: World Pup (2000)", genres: ["Children", "Comedy", "Drama"] },
+    { title: "Air Bud: Seventh Inning Fetch (2002)", genres: ["Children", "Comedy", "Drama"] },
+    { title: "Air Bud: Spikes Back (2003)", genres: ["Children", "Comedy", "Drama"] },
     { title: "Airplane! (1980)", genres: ["Comedy"] },
     { title: "Airplane II: The Sequel (1982)", genres: ["Comedy"] },
     { title: "Akira (1988)", genres: ["Action", "Animation", "Sci-Fi"] },
@@ -256,11 +296,11 @@ document.addEventListener('DOMContentLoaded', function() {
 		rec.textContent = suggestedMovie.title;
 		instructionText.textContent = "Based on your taste in " + suggestedMovie.genres.join(", ");
 		movieForm.style.display = "block";
+		resetButton.style.display = "inline-block";
 		nextButton.style.display = "none";
 		skipButton.style.display = "none";
 		output.style.display = "none";
 		slider.style.display = "none";
-		resetButton.style.display = "inline-block";
 		infoButton.style.display = "inline-block";
 	}
 
@@ -310,17 +350,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Event listener for the "Reset" button
     resetButton.addEventListener("click", function() {
-        // Reset all variables and display initial state
-        currentMovieIndex = 0;
-        moviesRanked = 0;
-		infoButton.style.display = "none";
-		instructionText.style.display = "block";
-        movieForm.style.display = "none";
-        movieTitle.textContent = "Welcome to FilmRex!";
-        instructionText.textContent = "Please enter in a rating for each of the following 10 movies and our advanced FilmRex Movie Recommendation Engine will compare your\
-		ratings with the ratings of 10,000 other people to learn about your tastes and find out the best movie for you to watch!";
-        startButton.style.display = "inline-block";
-		rec.style.display = "none";
+		location.reload();
     });
+	
+	// Change 1.0 - adding listener for when hovering over start-button
+	startButton.addEventListener('mouseover', camera_on()) 
 
+	function camera_on(){
+		const projectorContainer = document.getElementById('projector-container');
+
+		// Create the projector image
+		const projector = document.createElement('img');
+		projector.src = '/images/camera_on_wide.jpg'; 
+		projector.id = 'projector';
+		projectorContainer.appendChild(projector);
+	}
+		
 });

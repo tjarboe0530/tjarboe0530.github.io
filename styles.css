@@ -1,9 +1,9 @@
 body {
     font-family: Arial, sans-serif;
     /*background: linear-gradient(135deg, #ff4b4b 0%, #000000 100%);*/
-	background: url(images/theater.jpg);
-	background-size: 100% 115%;
-	background-attachment: scroll;
+    background: url(images/theater.jpg);
+    background-size: 100% 115%;
+    background-attachment: scroll;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,17 +23,17 @@ body {
 }
 
 h1 {
-	margin: auto;
+    margin: auto;
     font-size: 32px;
     font-weight: 700;
     color: #ff4b4b; /* Red color */
 }
 
 h2 {
-	margin = auto;
+    margin = auto;
     font-size: 40px;
     font-weight: 700;
-    color: #1c1c1c; 
+    color: #1c1c1c;
 }
 
 form {
@@ -49,7 +49,7 @@ form {
 
 .slider-container input[type=range] {
     width: 100%;
-	accent-color: red;
+    accent-color: red;
 }
 
 .slider-container output {
@@ -92,4 +92,28 @@ output {
     font-size: 18px;
     color: #1c1c1c;
     margin-bottom: 20px;
+}
+
+/* Change 1.0: Added styles for the projector effect */
+#projector-container {
+    position: relative;
+}
+
+#projector {
+	z-index: -1;
+    position: absolute;
+    width: 550px;
+    height: auto;
+    opacity: 0;
+    transform: translate(-50%, -195%);
+    transition: opacity 0.5s ease-in-out;
+}
+
+#start-button:hover ~ #projector-container #projector {
+    opacity: 1;
+}
+
+#movie-form {
+    position: relative;
+    z-index: 2;
 }
