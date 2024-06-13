@@ -343,7 +343,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		along every step of the way. Our first step was to deploy the Movie Recommendation Engine that you see here which is powered by FastAI's machine learning algorithims. \
 		As the name implies, FastAI allows us to quickly and efficiently use machine learning to compare your movie scores with those of the 10,000 other people \
 		that we have stored in our database. This vast amount of data allows us to find users with similar tastes as yours and recommend movies that those same users also loved.\
-		Stay tuned for more updates throughout 2024 as we roll out features such as the creation user accounts to track your ratings and fine tune your own personalized movie\
+		Stay tuned for more updates throughout 2024 as we roll out features such as the creation of user accounts to track your ratings and fine tune your own personalized movie\
 		recommendation engine, collaboration with friends to find the best movie for the gang to watch, and many more exciting things to come.\
 		Thank you for visiting and see ya at the box office!";
     });
